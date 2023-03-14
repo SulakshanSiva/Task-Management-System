@@ -1,5 +1,15 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+$btn-colour: #3498db;
 
+button{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($btn-colour, 10%);
+    }
+    
+    &:active {
+        background-color: darken($btn-colour, 20%);
+    }
+}
