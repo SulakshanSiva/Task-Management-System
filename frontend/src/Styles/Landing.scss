@@ -1,0 +1,29 @@
+
+.Landing {
+    background-image: url(../Assets/Images/white.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; /* or whatever height you want */
+
+    .hero {
+        position: fixed;
+        top: 50%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        padding: 0.625rem;
+
+        h1{
+            padding: 0.625rem;
+        }
+        p{
+            padding: 0.625rem;
+        }
+        button {
+            padding: 0.625rem;
+        }
+    }
+}
