@@ -5,12 +5,9 @@ import "../Styles/Navbar.scss";
 
 const Home = () => {
   return (
-    <div className='Home'>  
-
+    <div className='Home'> 
 
         <Navbar/>
-
-        
 
         <div className="Container">
             <div className="Col">
