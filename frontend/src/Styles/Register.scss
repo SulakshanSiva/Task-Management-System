@@ -1,0 +1,26 @@
+.Register {
+  .Container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Button {
+    background-color: #535753; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .Labels {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 20px;
+
+  }
+}
