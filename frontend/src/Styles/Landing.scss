@@ -1,14 +1,14 @@
 
 .Landing {
-    background-image: url(../Assets/Images/white.jpg);
+    background-image: url(../Assets/Images/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh; /* or whatever height you want */
 
     .hero {
         position: fixed;
-        top: 50%;
-        left: 33%;
+        top: 40%;
+        left: 25%;
         transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
@@ -17,6 +17,7 @@
         padding: 0.625rem;
 
         h1{
+            font-size:xx-large;
             padding: 0.625rem;
         }
         p{
@@ -24,6 +25,9 @@
         }
         button {
             padding: 0.625rem;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
         }
     }
 }
