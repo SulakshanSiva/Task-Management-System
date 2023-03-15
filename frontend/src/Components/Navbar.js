@@ -3,25 +3,22 @@ import "../Styles/Navbar.scss";
 
 const Navbar = () => {
     return (
-        <div className="navbar">
-            <nav class="navbar">
-                <ul class="main-nav" id="js-menu">
-                    <li>
-                        <a href="#" class="nav-links">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-links">Products</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-links">About Us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-links">Contact Us</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-links">Blog</a>
-                    </li>
+        <div className="Navbar">
+            <nav className="Nav">
+
+                <div className="Title">
+                    <h4>Title</h4>
+                </div>
+                
+                <ul>
+                    <div className="NavElements">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Log In</a></li>
+                    </div>    
                 </ul>
+
             </nav>
         </div>
     )
