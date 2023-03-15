@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/Register.scss";
+import Navbar from "./Navbar";
 
 const Login = () => {
   useState(() => {});
 
   return (
     <div className="Register">
+      <Navbar></Navbar>
       <div className="Container">
 
-        <h1>Login</h1>
+        <label className="LoginLabel">Login</label>
 
-        <input placeholder="Email"></input>
+        <input className="Input" placeholder="Email"></input>
 
-        <input placeholder="Password"></input>
+        <input className = "Input" placeholder="Password"></input>
 
-        <a href="" className="Labels">Forgot your password?</a>
-        <a href="" className="Labels">Create account</a>
-
+        <a href="" className="ForgotPassLabel">Forgot your password?</a>
         <button className="Button" onClick="">Sign in</button>
+        <a href="" className="CreateAccLabel">Create account</a>
       </div>
     </div>
   );

@@ -1,4 +1,7 @@
 .Register {
+  * {
+    font-family: "Assistant", sans-serif;
+  }
   .Container {
     height: 100vh;
     display: flex;
@@ -6,21 +9,68 @@
     justify-content: center;
     align-items: center;
   }
+  .Input {
+    margin: 8px;
+    width: 350px;
+    height: 35px;
+  }
+
   .Button {
-    background-color: #535753; /* Green */
+    background-color: #3498db; /* Green */
     border: none;
     color: white;
     padding: 10px 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
-    margin-top: 15px;
+    font-size: 15px;
+    margin-top: 30px;
+
+    &:hover {
+      background-color: darken(#3498db, 10%);
+    }
+
+    &:active {
+      background-color: darken(#3498db, 20%);
+    }
   }
-  .Labels {
+  .ForgotPassLabel {
+    font-size: 16px;
+    margin-right: 210px;
+
+    &:link {
+      color: black;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: black;
+    }
+
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+  .CreateAccLabel {
     font-size: 16px;
     margin-top: 10px;
-    margin-right: 20px;
 
+    &:link {
+      color: black;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: black;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .LoginLabel {
+    font-size: 45px;
+    margin-bottom: 15px;
   }
 }
