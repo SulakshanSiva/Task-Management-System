@@ -1,4 +1,5 @@
-$nav-color: black;
+$text-color: black;
+$hover-color: #3498db;
 .Navbar{
     height: 64px;
 
@@ -11,37 +12,45 @@ $nav-color: black;
 
         .Title{
             margin-left: 300px;
+            h4{
+                display: inline;
+            }
+            .SecondWord{
+                color: #3498db
+            }
         }
 
         ul {    
-
             .NavElements{
                 display: flex;
                 list-style: none; 
                 margin-right: 300px;
                 li {
                     padding : 0 25px;
-    
+
                     a:link {
-                        color: $nav-color;
+                        color: $text-color;
                         background-color: transparent;
                         text-decoration: none;
+                        background: transparent;
+                        transition: width .5s ease, background-color .5s ease;
                       }
                       
                       a:visited {
-                        color: $nav-color;
+                        color: $text-color;
                         background-color: transparent;
                         text-decoration: none;
                       }
                       
                       a:hover {
-                        color: red;
+                        color: $text-color;
                         background-color: transparent;
                         text-decoration: none;
+                        border-bottom: 2px solid $hover-color;
                       }
                       
                       a:active {
-                        color: $nav-color;
+                        color: $text-color;
                         background-color: transparent;
                         text-decoration: none;
                       }

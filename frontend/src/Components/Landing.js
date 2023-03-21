@@ -13,7 +13,7 @@ const Landing = () => {
         
             {/* Hero Section */}
             <section className="hero">
-                <h1>Welcome to our Website</h1>
+                <h1>Welcome to <h4>Plan</h4><h4 className='SecondWord'>Simple</h4></h1>
                 <p>Planning made simple.</p>
                 <Link to="/Login">
                     <button>Get Started</button>
