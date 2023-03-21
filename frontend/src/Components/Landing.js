@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "../Styles/Landing.scss";
 import "../Components/Navbar"
 import Navbar from "../Components/Navbar"
@@ -14,7 +15,9 @@ const Landing = () => {
             <section className="hero">
                 <h1>Welcome to our Website</h1>
                 <p>Planning made simple.</p>
-                <button>Get Started</button>
+                <Link to="/Login">
+                    <button>Get Started</button>
+                </Link>
             </section>
         
             {/* Features Section */}
