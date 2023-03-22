@@ -1,20 +1,14 @@
-
 .Landing {
     background-image: url(../Assets/Images/background.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh; /* or whatever height you want */
+    display: flex;
+    flex-direction: column;
 
     .hero {
-        position: fixed;
-        top: 40%;
-        left: 25%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        justify-content: center;
-        align-items: left;
-        flex-direction: column;
-        padding: 0.625rem;
+        margin-top: 15%;
+        margin-left: 13%;
 
         h1{
             font-size:xx-large;
@@ -24,16 +18,24 @@
             display: inline;
         }
         .SecondWord{
-            color: #7158CA
+            color: #866AE7
         }
         p{
             padding: 0.625rem;
         }
+    }
+    .start {
+        margin-left: 13%;
         button {
             padding: 0.625rem;
             margin-left: 10px;
             margin-top: 10px;
             margin-right: 10px;
+            display: inline-block;
+            border-radius: 4px;
+            outline: none;
+            width: fit-content;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         }
     }
 }
