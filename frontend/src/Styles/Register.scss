@@ -1,25 +1,46 @@
+$text-color: #7158CA;
+
 .Register {
-  * {
-    font-family: "Assistant", sans-serif;
-  }
+  background-color: rgb(234, 231, 231);
+
   .Container {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .Input {
-    margin: 8px;
-    width: 350px;
-    height: 35px;
+    overflow: hidden;
+
+    .SignUpLabel {
+      font-size: 15px;
+      padding: 10px 20px;
+      color: $text-color;
+      position: relative;
+      top: -30px;
+      right: -74px;
+      a {
+        text-decoration: none;
+      }
+  
+      a:hover {
+        color: darken($text-color, 60%);
+      }
+    }
+
+    .Input {
+      margin: 8px;
+      width: 350px;
+      height: 35px;
+      padding-left: 15px;
+    }
+
   }
 
   .Button {
-    background-color: #3498db; /* Green */
+    background-color: $text-color;
     border: none;
     color: white;
-    padding: 10px 35px;
+    padding: 10px 60px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -27,48 +48,37 @@
     margin-top: 30px;
 
     &:hover {
-      background-color: darken(#3498db, 10%);
+      background-color: darken($text-color, 10%);
     }
 
     &:active {
-      background-color: darken(#3498db, 20%);
+      background-color: darken($text-color, 20%);
     }
   }
   .ForgotPassLabel {
-    font-size: 16px;
-    margin-right: 210px;
+    font-size: 14px;
+    position: relative;
+    left: -110px;
+
+    color: $text-color;
 
     &:link {
-      color: black;
       text-decoration: none;
     }
 
-    &:visited {
-      color: black;
-    }
-
     &:hover {
-      color: black;
-      text-decoration: underline;
+      color: darken($text-color, 20%);
     }
   }
+
   .CreateAccLabel {
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 10px;
-
-    &:link {
-      color: black;
-      text-decoration: none;
-    }
-
-    &:visited {
-      color: black;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
+    color: black;
+    position: relative;
+    left: -33px;
   }
+
   .LoginLabel {
     font-size: 45px;
     margin-bottom: 15px;
