@@ -10,11 +10,15 @@ const Register = () => {
     const [valid, setValid] = useState('');
 
     const handleRegister = () => (
-        Axios.post("http://localhost:4000/Register", {
+        Axios.post("http://localhost:4000/auth/Register", {
             email: email,
             password: password,
-            valid: valid,
-        })
+        }).then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.error(error);
+          })
     )
 
   return (
