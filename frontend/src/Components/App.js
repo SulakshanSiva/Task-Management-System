@@ -5,7 +5,9 @@ import Register from './Register';
 import Error404 from './Error404';
 import Contact from './Contact';
 import About from './About';
+import Home from './Home';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing/>} />
           <Route path="/Login" element={<Login/>} />
+          <Route path="/Home" element={<Home/>} />
           <Route path="/Register" element={<Register/>} />
           <Route path="/Contact" element={<Contact/>}/>
           <Route path="/About" element={<About/>}/>
