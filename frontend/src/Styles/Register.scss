@@ -2,85 +2,106 @@ $text-color: #7158CA;
 
 .Register {
   background-color: rgb(234, 231, 231);
+  height: 100vh;
 
-  .Container {
-    height: 100vh;
+  .Wrapper{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+        .Container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-    .SignUpLabel {
-      font-size: 15px;
-      padding: 10px 20px;
-      color: $text-color;
-      position: relative;
-      top: -30px;
-      right: -74px;
-      a {
-        text-decoration: none;
-      }
+            .SignUpLabel {
+            font-size: 15px;
+            padding: 10px 20px;
+            color: $text-color;
+            position: relative;
+            top: -30px;
+            right: -74px;
+            a {
+                text-decoration: none;
+            }
+        
+            a:hover {
+                color: darken($text-color, 60%);
+            }
+            }
+
+            .Input {
+            margin: 8px;
+            width: 350px;
+            height: 35px;
+            padding-left: 15px;
+            }
+
+            .Error{
+                color: red;
+                margin-top: 10px;
+            }
+
+            .Success{
+                color: green;
+                margin-top: 10px;
+
+            }
+
+            .Button {
+                background-color: $text-color;
+                border: none;
+                color: white;
+                padding: 10px 60px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 15px;
+                margin-top: 30px;
+            
+                &:hover {
+                background-color: darken($text-color, 10%);
+                }
+            
+                &:active {
+                background-color: darken($text-color, 20%);
+                }
+            }
+
+            //   .ForgotPassLabel {
+            //     font-size: 14px;
+            //     position: relative;
+            //     left: -110px;
+            
+            //     color: $text-color;
+            
+            //     &:link {
+            //       text-decoration: none;
+            //     }
+            
+            //     &:hover {
+            //       color: darken($text-color, 20%);
+            //     }
+            //   }
+            
+            .CreateAccLabel {
+                font-size: 15px;
+                margin-top: 10px;
+                color: black;
+                position: relative;
+                left: -33px;
+            }
+            
+            .LoginLabel {
+                font-size: 45px;
+                margin-bottom: 15px;
+            }
+        }
+    }
   
-      a:hover {
-        color: darken($text-color, 60%);
-      }
-    }
-
-    .Input {
-      margin: 8px;
-      width: 350px;
-      height: 35px;
-      padding-left: 15px;
-    }
-
-  }
-
-  .Button {
-    background-color: $text-color;
-    border: none;
-    color: white;
-    padding: 10px 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    margin-top: 30px;
-
-    &:hover {
-      background-color: darken($text-color, 10%);
-    }
-
-    &:active {
-      background-color: darken($text-color, 20%);
-    }
-  }
-  .ForgotPassLabel {
-    font-size: 14px;
-    position: relative;
-    left: -110px;
-
-    color: $text-color;
-
-    &:link {
-      text-decoration: none;
-    }
-
-    &:hover {
-      color: darken($text-color, 20%);
-    }
-  }
-
-  .CreateAccLabel {
-    font-size: 15px;
-    margin-top: 10px;
-    color: black;
-    position: relative;
-    left: -33px;
-  }
-
-  .LoginLabel {
-    font-size: 45px;
-    margin-bottom: 15px;
-  }
 }
