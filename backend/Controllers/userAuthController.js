@@ -24,12 +24,12 @@ const userAuthController = {
                 uid: user.uid
             });
 
-            res.json({ message: 'Created account!'});
+            res.status(201).json({ message: 'Created account!'});   
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            res.json({ message: 'Error. Unable to create account.'});
+            res.status(404).json({ message: 'Error. Unable to create account.'});
         });
     },
 
@@ -41,22 +41,22 @@ const userAuthController = {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                res.json({ message: 'User has logged in!', uid: user.uid, email: user.email});
+                res.status(202).json({ message: 'User has logged in!', uid: user.uid, email: user.email});
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                res.json({ message: 'Error! Unable to log in.'});
+                res.status(404).json({ message: 'Error! Unable to log in.'});
             });
     },
 
     async Logout(req, res){
         signOut(auth).then(() => {
             // Sign-out successful.
-            res.json({ message: 'Signed Out!'});
+            res.status(202).json({ message: 'Signed Out!'});
         }).catch((error) => {
             // An error happened.
-            res.json({ message: 'Error. Unable to sign out.'});
+            res.status(404).json({ message: 'Error. Unable to sign out.'});
         });
     }
 }

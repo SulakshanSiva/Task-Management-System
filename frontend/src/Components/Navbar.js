@@ -1,8 +1,16 @@
 import React from 'react';
 import "../Styles/Navbar.scss";
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
+    const refreshPage = () => {
+        navigate(0);
+    }
+
     return (
         <div className="Navbar">
             <nav className="Nav">
@@ -14,20 +22,20 @@ const Navbar = () => {
                 <ul>
                     <div className="NavElements">
                         <li>
-                            <a>
+                            <a onClick={refreshPage}>
                                 <Link to="/">Home</Link>
                             </a>
                         </li>
                         <li>
-                            <a>
+                            <a onClick={refreshPage}>
                                 <Link to="/About">About</Link>
                             </a>
                         </li>
-                        <li>
+                        <li onClick={refreshPage}>
                             <Link to="/Contact">Contact Us</Link>
                         </li>
                         <li>
-                            <a>
+                            <a onClick={refreshPage}>
                                 <Link to="/Login">Log In</Link>
                             </a>
                         </li>

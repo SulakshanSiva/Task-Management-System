@@ -106,14 +106,18 @@ const Home = () => {
   };
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      <div className="home">
-      {/* <Navbar/> */}
-        {Object.values(columns).map((column) => (
-          <Column key={column.id} column={column} />
-        ))}
-      </div>
-    </DragDropContext>
+    <div className="container">
+        <Navbar/>
+        <button onClick={handleLogOut}>Log Out</button>
+        <DragDropContext onDragEnd={onDragEnd}>
+            <div className="home">
+            
+                {Object.values(columns).map((column) => (
+                <Column key={column.id} column={column} />
+                ))}
+            </div>
+        </DragDropContext>
+    </div>
   );
 };
 
