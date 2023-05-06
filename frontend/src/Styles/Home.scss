@@ -1,19 +1,7 @@
-.Home{
-
-    .Container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-content: space-around;
-    
-        .Col{
-            height: 750px;
-            width: 400px;
-            background-color: #555;
-        }
-
-    }
-
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 24px auto;
+  width: 80%;
+  gap: 8px;
 }
-
-    
