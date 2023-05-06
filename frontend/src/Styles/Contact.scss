@@ -1,0 +1,97 @@
+$theme-color: #7158CA;
+
+.Contact{
+    background-color: rgb(234, 231, 231);
+    height: 100vh;
+    .Wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Container{
+            background-color: white;
+            width: 1100px;
+            height: 725px;
+            border-radius: 25px;
+            text-align: center;
+            .Info{
+                margin-top: 25px;
+
+                label{
+                    margin-bottom: 5px;
+                }
+
+                p{
+                    margin-top: 5px;
+                    font-weight: bold;
+                }
+                button{
+                    padding: 0.625rem;
+                    display: inline-block;
+                    border-radius: 4px;
+                    outline: none;
+                    width: 400px;
+                    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                }
+
+                .Header{
+                    margin-bottom: 25px;
+                }
+                
+                .NameContainer{
+                    margin-bottom: 25px;
+                    .Name{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        input{
+                            width: 400px;
+                            height: 20px;
+                            border: 1px solid $theme-color;
+                            padding-left: 5px;
+                            border-radius: 2px;
+                        }
+                    }
+
+                    .Left{
+                        width: 50%;
+                        float: left;
+                    }
+
+                }
+
+                .Email{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    
+                    input{
+                        width: 500px;
+                        height: 20px;
+                        padding-left: 5px;
+                        border: 1px solid $theme-color;
+                        border-radius: 2px;
+                    }
+
+                }
+
+                .Message{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 25px;
+                    
+                    .MsgBox{
+                        width: 500px;
+                        height: 200px;
+                        border: 1px solid $theme-color;
+                        resize: none;
+                        border-radius: 2px;
+                    }
+                }
+
+            }
+        }
+    }
+}

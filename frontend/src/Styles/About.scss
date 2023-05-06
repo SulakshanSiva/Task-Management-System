@@ -1,0 +1,68 @@
+.About{
+    background-color: rgb(234, 231, 231);
+    height: 100vh;
+
+    .Container{
+        .RowOne{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .RowTwo{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .Row{
+            margin-bottom: 30px;
+            .Card{
+                display: flex;
+                flex-direction: row;
+                background-color: #7158CA;
+                width: 600px;
+                height: 300px;
+                border-radius: 4px;
+                color: white;
+
+                .Info{
+                    padding: 100px 0;
+                    margin-right: 20px;
+                    display: flex;
+                    flex-direction: column;
+
+
+                    a{
+                        margin-left: 25px;
+                    }
+                }
+
+                .Content{
+                    .AboutMe{
+                        padding: 60px 0;
+                        text-align: center;
+                        margin-right: 30px;
+                    }
+
+                    .Header{
+                        margin-bottom: 10px;
+                        .FirstName{
+                            margin-right: 80px;
+                        }
+    
+                        .LastName{
+                            margin-left: 10px;
+                        }
+    
+                    }   
+                    
+                }
+
+                
+            }
+
+        }
+    }
+}
