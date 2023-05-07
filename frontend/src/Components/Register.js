@@ -14,7 +14,7 @@ const Register = () => {
 
     const handleRegister = () => {
         // check if both passwords match
-        if(password != valid){
+        if(password !== valid){
             // display error statement
             setRegisterSuccess(false);
             setCreateError(false);
@@ -91,7 +91,7 @@ const Register = () => {
 
 
             <div className="SignUpLabel">
-            <a href="">
+            <a href="/#">
                 <Link to="/Login">Login</Link>
             </a>
             </div>
