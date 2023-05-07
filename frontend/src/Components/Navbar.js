@@ -22,20 +22,22 @@ const Navbar = () => {
                 <ul>
                     <div className="NavElements">
                         <li>
-                            <a onClick={refreshPage}>
+                            <a href="/#" onClick={refreshPage}>
                                 <Link to="/">Home</Link>
                             </a>
                         </li>
                         <li>
-                            <a onClick={refreshPage}>
+                            <a href="/#" onClick={refreshPage}>
                                 <Link to="/About">About</Link>
                             </a>
                         </li>
-                        <li onClick={refreshPage}>
-                            <Link to="/Contact">Contact Us</Link>
+                        <li>
+                            <a href="/#" onClick={refreshPage}>
+                                <Link to="/Contact">Contact Us</Link>
+                            </a>
                         </li>
                         <li>
-                            <a onClick={refreshPage}>
+                            <a href="/#" onClick={refreshPage}>
                                 <Link to="/Login">Log In</Link>
                             </a>
                         </li>

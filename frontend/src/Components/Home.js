@@ -1,10 +1,9 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';
 import {DragDropContext} from 'react-beautiful-dnd'
 import Column from './Column';
-import Card from './Card';
 import '../Styles/Home.scss'
 import Navbar from "./Navbar";
 
@@ -25,24 +24,49 @@ const Home = () => {
         })
   )
 
-  const [cards, setCards] = useState(['Item 1', 'Item 2', 'Item 3'])
+    const initialColumns = {
+        todo: {
+            id: 'todo',
+            cards: [],
+        },
+        doing: {
+            id: 'doing',
+            cards: [],
+        },
+        done: {
+            id: 'done',
+            cards: [],
+        },
+    };
 
-  const initialColumns = {
-    todo: {
-      id: 'todo',
-      cards: ['item 1', 'item 2', 'item 3'],
-    },
-    doing: {
-      id: 'doing',
-      cards: [],
-    },
-    done: {
-      id: 'done',
-      cards: [],
-    },
-  };
+    const [columns, setColumns] = useState(initialColumns);
 
-  const [columns, setColumns] = useState(initialColumns);
+    const initializeList = (listName) => {
+        Axios.post("http://localhost:4000/todo/loadList", {
+            list: listName,
+            uid: currentUser.uid
+        }).then(response => {
+
+            setColumns(prevColumns => ({
+                ...prevColumns,
+                [listName]: {
+                  ...prevColumns[listName],
+                  cards: response.data.list,
+                },
+            }))
+            
+          })
+          .catch(error => {
+            console.error(error);
+          })
+    }   
+
+    useEffect(() => {
+        initializeList(initialColumns.todo.id);
+        initializeList(initialColumns.doing.id);
+        initializeList(initialColumns.done.id);
+    }, []);
+
 
   const onDragEnd = ({ source, destination }) => {
     // Make sure we have a valid destination
