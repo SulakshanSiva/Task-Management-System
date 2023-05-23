@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "../Styles/Navbar.scss";
+import { AuthContext } from '../Context/AuthContext';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-
+import Axios from "axios";
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -10,6 +11,30 @@ const Navbar = () => {
     const refreshPage = () => {
         navigate(0);
     }
+
+    const { currentUser, endSession } = useContext(AuthContext);
+
+    const handleLogOut = () => (
+        Axios.delete("http://localhost:4000/auth/Logout", {
+        }).then(response => {
+            console.log(response.data);
+            endSession(currentUser)
+            navigate("/")
+          })
+          .catch(error => {
+            console.error(error);
+          })
+    )
+
+    const logInElement = 
+    <a href="/#" onClick={refreshPage}>
+        <Link to="/Login">Log In</Link>
+    </a>
+
+    const logOutElement = 
+    <a href="/#" onClick={handleLogOut}>
+        Log Out
+    </a>
 
     return (
         <div className="Navbar">
@@ -37,9 +62,7 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="/#" onClick={refreshPage}>
-                                <Link to="/Login">Log In</Link>
-                            </a>
+                            {currentUser ? logOutElement : logInElement}
                         </li>
                     </div>    
                 </ul>

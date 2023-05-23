@@ -12,18 +12,6 @@ const Home = () => {
 
   const navigate = useNavigate();
 
-  const handleLogOut = () => (
-      Axios.delete("http://localhost:4000/auth/Logout", {
-      }).then(response => {
-          console.log(response.data);
-          endSession(currentUser)
-          navigate("/")
-        })
-        .catch(error => {
-          console.error(error);
-        })
-  )
-
     const initialColumns = {
         todo: {
             id: 'todo',
@@ -132,7 +120,6 @@ const Home = () => {
   return (
     <div className="container">
         <Navbar/>
-        <button onClick={handleLogOut}>Log Out</button>
         <DragDropContext onDragEnd={onDragEnd}>
             <div className="home">
             
