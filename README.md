@@ -25,6 +25,8 @@ After logging in, you will be presented with the user home page. This home page 
 ## Future Updates
 
 * Deploy application for public use
+* Improve CSS
+* Make website responsive
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
